@@ -1,0 +1,46 @@
+{
+  "name": "house-prices-us",
+  "title": "US House Price Index (Case-Shiller)",
+  "licenses": [
+    {
+      "url": "http://opendatacommons.org/licenses/pddl/1.0/", 
+      "name": "Public Domain Dedication and License"
+    }
+  ], 
+  "sources": [{
+    "name": "Standard and Poors Case-Shiller Indices",
+    "web": "http://www.standardandpoors.com/indices/sp-case-shiller-home-price-indices/en/us/?indexId=spusa-cashpidff--p-us----"
+  }],
+  "keywords": ["Indicator", "House Prices", "US"],
+  "resources": [
+    {
+      "name": "national",
+      "path": "national.csv",
+      "schema": {
+        "fields": [
+          {
+            "type": "date", 
+            "format": "yyyy",
+            "id": "Year"
+          }, 
+          {
+            "type": "number", 
+            "description": "Case-Shiller Index level at national level (not seasonally adjusted)",
+            "id": "Composite-US"
+          }
+        ]
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "Graph",
+      "type": "Graph",
+      "state": {
+        "graphType": "lines-and-points",
+        "group": "Year",
+        "series": [ "Composite-US" ]
+      }
+    }
+  ]
+}
