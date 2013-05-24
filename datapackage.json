@@ -30,6 +30,107 @@
           }
         ]
       }
+    },
+    {
+      "path": "cities.csv",
+      "name": "cities",
+      "description": "Case-Shiller index values for cities across the US. Monthly.",
+      "schema": {
+        "fields": [
+          {
+            "id": "Date",
+            "type": "date"
+          },
+          {
+            "id": "AZ-Phoenix",
+            "type": "number"
+          },
+          {
+            "id": "CA-Los Angeles",
+            "type": "number"
+          },
+          {
+            "id": "CA-San Diego",
+            "type": "number"
+          },
+          {
+            "id": "CA-San Francisco",
+            "type": "number"
+          },
+          {
+            "id": "CO-Denver",
+            "type": "number"
+          },
+          {
+            "id": "DC-Washington",
+            "type": "number"
+          },
+          {
+            "id": "FL-Miami",
+            "type": "number"
+          },
+          {
+            "id": "FL-Tampa",
+            "type": "number"
+          },
+          {
+            "id": "GA-Atlanta",
+            "type": "number"
+          },
+          {
+            "id": "IL-Chicago",
+            "type": "number"
+          },
+          {
+            "id": "MA-Boston",
+            "type": "number"
+          },
+          {
+            "id": "MI-Detroit",
+            "type": "number"
+          },
+          {
+            "id": "MN-Minneapolis",
+            "type": "number"
+          },
+          {
+            "id": "NC-Charlotte",
+            "type": "number"
+          },
+          {
+            "id": "NV-Las Vegas",
+            "type": "number"
+          },
+          {
+            "id": "NY-New York",
+            "type": "number"
+          },
+          {
+            "id": "OH-Cleveland",
+            "type": "number"
+          },
+          {
+            "id": "OR-Portland",
+            "type": "number"
+          },
+          {
+            "id": "TX-Dallas",
+            "type": "number"
+          },
+          {
+            "id": "WA-Seattle",
+            "type": "number"
+          },
+          {
+            "id": "Composite-10",
+            "type": "number"
+          },
+          {
+            "id": "Composite-20",
+            "type": "number"
+          }
+        ]
+      }
     }
   ],
   "views": [
