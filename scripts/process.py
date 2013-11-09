@@ -3,7 +3,7 @@ import csv
 def process_national():
     fo = open('cache/national.csv')
     reader = csv.DictReader(fo)
-    foout = open('national.csv', 'w')
+    foout = open('data/national-yearly.csv', 'w')
     writer = csv.writer(foout)
     writer.writerow(['Year', 'Composite-US'])
     vals = []
@@ -19,7 +19,7 @@ def process_national():
 def process_national_q():
     fo = open('cache/national.csv')
     reader = csv.DictReader(fo)
-    foout = open('national-qq.csv', 'w')
+    foout = open('data/national-quarterly.csv', 'w')
     writer = csv.writer(foout)
     writer.writerow(['Date', 'Composite-US'])
     for row in reader:

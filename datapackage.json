@@ -14,26 +14,47 @@
   "keywords": ["Indicator", "House Prices", "US"],
   "resources": [
     {
-      "name": "national",
-      "path": "national.csv",
+      "name": "national-quarterly",
+      "path": "data/national-quarterly.csv",
+      "periodicity": "quarterly",
       "schema": {
         "fields": [
           {
             "type": "date", 
-            "format": "yyyy",
-            "id": "Year"
+            "format": "yyyy-mm-dd",
+            "id": "Date"
           }, 
           {
             "type": "number", 
-            "description": "Case-Shiller Index level at national level (not seasonally adjusted)",
+            "description": "Case-Shiller Index level at national level (not seasonally adjusted). Quarterly.",
             "id": "Composite-US"
           }
         ]
       }
     },
     {
-      "path": "cities.csv",
+      "name": "national-yearly",
+      "description": "An annual version of Case-Shiller series derived by picking value from 4th quarter of each year",
+      "path": "data/national-yearly.csv",
+      "periodicity": "yearly",
+      "schema": {
+        "fields": [
+          {
+            "type": "date", 
+            "format": "yyyy-mm-dd",
+            "id": "Date"
+          }, 
+          {
+            "type": "number", 
+            "description": "Case-Shiller Index levelat national level in 4th quarter of each year.",
+            "id": "Composite-US"
+          }
+        ]
+      }
+    },
+    {
       "name": "cities",
+      "path": "data/cities.csv",
       "description": "Case-Shiller index values for cities across the US. Monthly.",
       "schema": {
         "fields": [
@@ -139,7 +160,7 @@
       "type": "Graph",
       "state": {
         "graphType": "lines-and-points",
-        "group": "Year",
+        "group": "Date",
         "series": [ "Composite-US" ]
       }
     }
