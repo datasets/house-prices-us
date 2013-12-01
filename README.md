@@ -13,11 +13,14 @@ javascript to find the actual download locations:
 * [National index][nat] (xls)
 * [City indices][city] (xls)
 
-To convert to the final form we do various processing:
-
-* Convert to CSV with dataconvert
-* Normalize the files using scripts/process.py
-
 [nat]: http://www.standardandpoors.com/servlet/BlobServer?blobheadername3=MDT-Type&blobcol=urldocumentfile&blobtable=SPComSecureDocument&blobheadervalue2=inline%3B+filename%3Ddownload.xls&blobheadername2=Content-Disposition&blobheadervalue1=application%2Fexcel&blobkey=id&blobheadername1=content-type&blobwhere=1245214513097&blobheadervalue3=abinary%3B+charset%3DUTF-8&blobnocache=true
 [city]: http://www.standardandpoors.com/servlet/BlobServer?blobheadername3=MDT-Type&blobcol=urldocumentfile&blobtable=SPComSecureDocument&blobheadervalue2=inline%3B+filename%3Ddownload.xls&blobheadername2=Content-Disposition&blobheadervalue1=application%2Fexcel&blobkey=id&blobheadername1=content-type&blobwhere=1245214507048&blobheadervalue3=abinary%3B+charset%3DUTF-8&blobnocache=true
+
+## Wrangling
+
+To download and process the data do:
+
+    python scripts/process.py
+
+Updated data files will then be in `data` directory.
 
