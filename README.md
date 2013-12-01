@@ -8,7 +8,7 @@ There is [home page for Indices on S&P website][sp-home]. This provides a table
 of links but these are not direct file URLs and you have dig around in S&P's
 javascript to find the actual download locations:
 
-[sp-home]: http://www.standardandpoors.com/indices/sp-case-shiller-home-price-indices/en/us/?indexId=spusa-cashpidff--p-us----
+[sp-home]: http://www.spindices.com/index-family/real-estate/sp-case-shiller
 
 * [National index][nat] (xls)
 * [City indices][city] (xls)

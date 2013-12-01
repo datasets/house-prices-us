@@ -9,7 +9,7 @@
   ], 
   "sources": [{
     "name": "Standard and Poors Case-Shiller Indices",
-    "web": "http://www.standardandpoors.com/indices/sp-case-shiller-home-price-indices/en/us/?indexId=spusa-cashpidff--p-us----"
+    "web": "http://www.spindices.com/index-family/real-estate/sp-case-shiller"
   }],
   "keywords": ["Indicator", "House Prices", "US"],
   "resources": [
