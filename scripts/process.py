@@ -4,8 +4,8 @@ import urllib
 import shutil
 import dataconverters
 
-url_national = 'http://www.standardandpoors.com/servlet/BlobServer?blobheadername3=MDT-Type&blobcol=urldocumentfile&blobtable=SPComSecureDocument&blobheadervalue2=inline%3B+filename%3Ddownload.xls&blobheadername2=Content-Disposition&blobheadervalue1=application%2Fexcel&blobkey=id&blobheadername1=content-type&blobwhere=1245214513097&blobheadervalue3=abinary%3B+charset%3DUTF-8&blobnocache=true'
-url_cities = 'http://www.standardandpoors.com/servlet/BlobServer?blobheadername3=MDT-Type&blobcol=urldocumentfile&blobtable=SPComSecureDocument&blobheadervalue2=inline%3B+filename%3Ddownload.xls&blobheadername2=Content-Disposition&blobheadervalue1=application%2Fexcel&blobkey=id&blobheadername1=content-type&blobwhere=1245214507048&blobheadervalue3=abinary%3B+charset%3DUTF-8&blobnocache=true'
+url_national = 'http://us.spindices.com/documents/additionalinfo/20131126/64929_csnational-values-1126.xls'
+url_cities = 'http://us.spindices.com/documents/additionalinfo/20131126/64929_cshomeprice-history-1126.xls'
 xls_national = 'tmp/national.xls'
 xls_cities = 'tmp/cities.xls'
 tmp_national = 'tmp/national.csv'

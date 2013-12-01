@@ -13,8 +13,8 @@ javascript to find the actual download locations:
 * [National index][nat] (xls)
 * [City indices][city] (xls)
 
-[nat]: http://www.standardandpoors.com/servlet/BlobServer?blobheadername3=MDT-Type&blobcol=urldocumentfile&blobtable=SPComSecureDocument&blobheadervalue2=inline%3B+filename%3Ddownload.xls&blobheadername2=Content-Disposition&blobheadervalue1=application%2Fexcel&blobkey=id&blobheadername1=content-type&blobwhere=1245214513097&blobheadervalue3=abinary%3B+charset%3DUTF-8&blobnocache=true
-[city]: http://www.standardandpoors.com/servlet/BlobServer?blobheadername3=MDT-Type&blobcol=urldocumentfile&blobtable=SPComSecureDocument&blobheadervalue2=inline%3B+filename%3Ddownload.xls&blobheadername2=Content-Disposition&blobheadervalue1=application%2Fexcel&blobkey=id&blobheadername1=content-type&blobwhere=1245214507048&blobheadervalue3=abinary%3B+charset%3DUTF-8&blobnocache=true
+[nat]: http://us.spindices.com/documents/additionalinfo/20131126/64929_csnational-values-1126.xls'
+[city]: http://us.spindices.com/documents/additionalinfo/20131126/64929_cshomeprice-history-1126.xls
 
 ## Wrangling
 
