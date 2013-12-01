@@ -14,9 +14,10 @@
   "keywords": ["Indicator", "House Prices", "US"],
   "resources": [
     {
-      "name": "national-quarterly",
-      "path": "data/national-quarterly.csv",
-      "periodicity": "quarterly",
+      "name": "national-quarter",
+      "path": "data/national-quarter.csv",
+      "description": "Quarterly Case-Shiller US hous price series",
+      "periodicity": "quarter",
       "schema": {
         "fields": [
           {
@@ -33,10 +34,10 @@
       }
     },
     {
-      "name": "national-yearly",
+      "name": "national-year",
       "description": "An annual version of Case-Shiller series derived by picking value from 4th quarter of each year",
-      "path": "data/national-yearly.csv",
-      "periodicity": "yearly",
+      "path": "data/national-year.csv",
+      "periodicity": "year",
       "schema": {
         "fields": [
           {
@@ -54,8 +55,9 @@
     },
     {
       "name": "cities",
-      "path": "data/cities.csv",
+      "path": "data/cities-month.csv",
       "description": "Case-Shiller index values for cities across the US. Monthly.",
+      "periodicity": "month",
       "schema": {
         "fields": [
           {
