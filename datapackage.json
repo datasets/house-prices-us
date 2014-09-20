@@ -9,55 +9,19 @@
   ], 
   "sources": [{
     "name": "Standard and Poors Case-Shiller Indices",
-    "web": "http://www.spindices.com/index-family/real-estate/sp-case-shiller"
+    "web": "http://www.spindices.com/indices/real-estate/sp-case-shiller-us-national-home-price-index"
   }],
   "keywords": ["Indicator", "House Prices", "US"],
   "resources": [
     {
-      "name": "national-quarter",
-      "path": "data/national-quarter.csv",
-      "description": "Quarterly Case-Shiller US hous price series",
-      "periodicity": "quarter",
-      "schema": {
-        "fields": [
-          {
-            "type": "date", 
-            "format": "yyyy-mm-dd",
-            "id": "Date"
-          }, 
-          {
-            "type": "number", 
-            "description": "Case-Shiller Index level at national level (not seasonally adjusted). Quarterly.",
-            "id": "Composite-US"
-          }
-        ]
-      }
-    },
-    {
-      "name": "national-year",
-      "description": "An annual version of Case-Shiller series derived by picking value from 4th quarter of each year",
-      "path": "data/national-year.csv",
-      "periodicity": "year",
-      "schema": {
-        "fields": [
-          {
-            "type": "date", 
-            "format": "yyyy-mm-dd",
-            "id": "Date"
-          }, 
-          {
-            "type": "number", 
-            "description": "Case-Shiller Index levelat national level in 4th quarter of each year.",
-            "id": "Composite-US"
-          }
-        ]
-      }
-    },
-    {
       "name": "cities",
       "path": "data/cities-month.csv",
-      "description": "Case-Shiller index values for cities across the US. Monthly.",
+      "description": "Case-Shiller US home price index levels at national and city level. Monthly.",
       "periodicity": "month",
+      "sources": [{
+        "name": "Home Price Index Levels",
+        "web": "http://www.spindices.com/documents/additionalinfo/20140826-107542/107542_cshomeprice-history-0826.xls?force_download=true"
+      }],
       "schema": {
         "fields": [
           {
@@ -151,6 +115,10 @@
           {
             "id": "Composite-20",
             "type": "number"
+          },
+          {
+            "id": "National-US",
+            "type": "number"
           }
         ]
       }
@@ -163,7 +131,7 @@
       "state": {
         "graphType": "lines-and-points",
         "group": "Date",
-        "series": [ "Composite-US" ]
+        "series": [ "National-US" ]
       }
     }
   ]
