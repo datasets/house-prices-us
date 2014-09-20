@@ -50,3 +50,11 @@ but the HTML you see in your browser and the source HTML are different. In
 addition, the actual location of the XLS file continues to change on each
 release.
 
+## License
+
+Any rights of the maintainer are licensed under the PDDL. Exact legal status of
+source data (and hence of resulting processe data) is unclear but could have a
+presumption of public domain given its factual nature and US provenance.
+However, the current application of PDDL is indicative of maintainers
+best-guess (and comes with no warranty).
+
