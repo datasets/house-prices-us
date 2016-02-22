@@ -3,6 +3,7 @@ import csv
 import urllib
 import shutil
 import logging
+import re
 import ssl
 from functools import partial
 import dataconverters
@@ -19,13 +20,14 @@ def setup():
 
 def find_links():
     '''Find all the download links in the page - they change every month'''
-    url = 'http://www.spindices.com/indices/real-estate/sp-case-shiller-us-national-home-price-index'
+    url = 'http://eu.spindices.com/indices/real-estate/sp-case-shiller-us-national-home-price-index'
     content = urllib.urlopen(url).read()
-    import re
     # download links are in dropdown from additional item page now
     # note in web browser they are "a" links but in curl etc they are <option>
-    pattern = '<option value="([^"]*)">([^<]*)</option>'
+    pattern = '<option [^>]+ value="([^"]*)">([^<]*)</option>'
     links = re.findall(pattern, content)
+    # get both .xls links and .pdf links - we only want pdf
+    links = [ l for l in links if '.xls' in l[0] ]
     return links
 
 def retrieve():
@@ -53,12 +55,10 @@ def retrieve():
        in python (and it works)
     '''
     # have monkey patch ssl - see notes in docstring
-    ssl.wrap_socket = partial(ssl.wrap_socket, ssl_version=ssl.PROTOCOL_SSLv3)
+    # ssl.wrap_socket = partial(ssl.wrap_socket, ssl_version=ssl.PROTOCOL_SSLv3)
 
     for linkOffset, name in find_links():
-        if linkOffset.endswith('.pdf?force_download=true'):
-            continue
-        url = 'http://www.spindices.com' + linkOffset
+        url = 'http://eu.spindices.com' + linkOffset
         fn = name.strip().lower().replace(' ', '-') + '.xls'
         dest = os.path.join('archive', fn)
         logger.info('Retrieving: %s' % url)
@@ -89,7 +89,7 @@ def extract():
 
 def process():
     setup()
-    retrieve()
+    # retrieve()
     extract()
 
 if __name__ == '__main__':
