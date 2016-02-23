@@ -3,10 +3,10 @@
   "title": "US House Price Index (Case-Shiller)",
   "licenses": [
     {
-      "url": "http://opendatacommons.org/licenses/pddl/1.0/", 
+      "url": "http://opendatacommons.org/licenses/pddl/1.0/",
       "name": "Public Domain Dedication and License"
     }
-  ], 
+  ],
   "sources": [{
     "name": "Standard and Poors Case-Shiller Indices",
     "web": "http://www.spindices.com/indices/real-estate/sp-case-shiller-us-national-home-price-index"
@@ -25,99 +25,99 @@
       "schema": {
         "fields": [
           {
-            "id": "Date",
+            "name": "Date",
             "type": "date"
           },
           {
-            "id": "AZ-Phoenix",
+            "name": "AZ-Phoenix",
             "type": "number"
           },
           {
-            "id": "CA-Los Angeles",
+            "name": "CA-Los Angeles",
             "type": "number"
           },
           {
-            "id": "CA-San Diego",
+            "name": "CA-San Diego",
             "type": "number"
           },
           {
-            "id": "CA-San Francisco",
+            "name": "CA-San Francisco",
             "type": "number"
           },
           {
-            "id": "CO-Denver",
+            "name": "CO-Denver",
             "type": "number"
           },
           {
-            "id": "DC-Washington",
+            "name": "DC-Washington",
             "type": "number"
           },
           {
-            "id": "FL-Miami",
+            "name": "FL-Miami",
             "type": "number"
           },
           {
-            "id": "FL-Tampa",
+            "name": "FL-Tampa",
             "type": "number"
           },
           {
-            "id": "GA-Atlanta",
+            "name": "GA-Atlanta",
             "type": "number"
           },
           {
-            "id": "IL-Chicago",
+            "name": "IL-Chicago",
             "type": "number"
           },
           {
-            "id": "MA-Boston",
+            "name": "MA-Boston",
             "type": "number"
           },
           {
-            "id": "MI-Detroit",
+            "name": "MI-Detroit",
             "type": "number"
           },
           {
-            "id": "MN-Minneapolis",
+            "name": "MN-Minneapolis",
             "type": "number"
           },
           {
-            "id": "NC-Charlotte",
+            "name": "NC-Charlotte",
             "type": "number"
           },
           {
-            "id": "NV-Las Vegas",
+            "name": "NV-Las Vegas",
             "type": "number"
           },
           {
-            "id": "NY-New York",
+            "name": "NY-New York",
             "type": "number"
           },
           {
-            "id": "OH-Cleveland",
+            "name": "OH-Cleveland",
             "type": "number"
           },
           {
-            "id": "OR-Portland",
+            "name": "OR-Portland",
             "type": "number"
           },
           {
-            "id": "TX-Dallas",
+            "name": "TX-Dallas",
             "type": "number"
           },
           {
-            "id": "WA-Seattle",
+            "name": "WA-Seattle",
             "type": "number"
           },
           {
-            "id": "Composite-10",
+            "name": "Composite-10",
             "type": "number"
           },
           {
-            "id": "Composite-20",
+            "name": "Composite-20",
             "type": "number"
           },
           {
-            "id": "National-US",
+            "name": "National-US",
             "type": "number"
           }
         ]
