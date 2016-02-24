@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import os
 import csv
 import urllib
@@ -73,7 +74,7 @@ def extract():
     # all-month.csv might be more appropriate but we wanted to keep continuity
     # with cities-month.csv (before mid 2014 city data and national data were
     # provided separately but now there is just one file with everything) 
-    out_path = ['data/cities-month.csv', 'data/national.csv']
+    out_path = ['data/cities-month.csv', 'data/national-month.csv']
 
     tmp_out = os.path.join('tmp', 'home-price-index-levels.csv'), os.path.join('tmp', 'national-home-price-index-levels.csv')
     for index in range(len(tmp_out)):
