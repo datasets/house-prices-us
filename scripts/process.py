@@ -69,27 +69,28 @@ def retrieve():
 def extract():
     '''Extract data from cached raw data files in archive and write to data/
     '''
-    source = 'archive/home-price-index-levels.xls'
+    source = ['archive/home-price-index-levels.xls', 'archive/national-home-price-index-levels.xls']
     # all-month.csv might be more appropriate but we wanted to keep continuity
     # with cities-month.csv (before mid 2014 city data and national data were
     # provided separately but now there is just one file with everything) 
-    out_path = 'data/cities-month.csv'
+    out_path = ['data/cities-month.csv', 'data/national-month.csv']
 
-    tmp_out = os.path.join('tmp', 'home-price-index-levels.csv')
-    dataconverters.dataconvert(source, tmp_out, guess_types=False)
-
-    indata = open(tmp_out).read()
-    # fix time in dataconvert which adds 00:00:00
-    indata = indata.replace(' 00:00:00', '')
-    indata = indata.replace('column_1', 'Date')
-    indata = indata.split('\n')
-    del indata[1]
-    indata = '\n'.join(indata)
-    open(out_path, 'w').write(indata)
+    tmp_out = os.path.join('tmp', 'home-price-index-levels.csv'), os.path.join('tmp', 'national-home-price-index-levels.csv')
+    for index in range(len(tmp_out)):
+    	dataconverters.dataconvert(source[index], tmp_out[index], guess_types=False)
+	
+        indata = open(tmp_out[index]).read()
+        # fix time in dataconvert which adds 00:00:00
+        indata = indata.replace(' 00:00:00', '')
+        indata = indata.replace('column_1', 'Date')
+        indata = indata.split('\n')
+        del indata[1]
+        indata = '\n'.join(indata)
+    	open(out_path[index], 'w').write(indata)
 
 def process():
     setup()
-    # retrieve()
+    retrieve()
     extract()
 
 if __name__ == '__main__':
