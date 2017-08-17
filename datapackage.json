@@ -4,29 +4,40 @@
   "licenses": [
     {
       "url": "http://opendatacommons.org/licenses/pddl/1.0/",
-      "name": "Public Domain Dedication and License"
+      "name": "public_domain_dedication_and_license"
     }
   ],
-  "sources": [{
-    "name": "Standard and Poors Case-Shiller Indices",
-    "web": "http://www.spindices.com/indices/real-estate/sp-case-shiller-us-national-home-price-index"
-  }],
-  "keywords": ["Indicator", "House Prices", "US"],
+  "sources": [
+    {
+      "name": "Standard and Poors Case-Shiller Indices",
+      "web": "http://www.spindices.com/indices/real-estate/sp-case-shiller-us-national-home-price-index",
+      "title": "Standard and Poors Case-Shiller Indices"
+    }
+  ],
+  "keywords": [
+    "Indicator",
+    "House Prices",
+    "US"
+  ],
   "resources": [
     {
       "name": "cities",
       "path": "data/cities-month.csv",
       "description": "Case-Shiller US home price index levels at national and city level. Monthly.",
       "periodicity": "month",
-      "sources": [{
-        "name": "Home Price Index Levels",
-        "web": "http://www.spindices.com/documents/additionalinfo/20140826-107542/107542_cshomeprice-history-0826.xls?force_download=true"
-      }],
+      "sources": [
+        {
+          "name": "Home Price Index Levels",
+          "web": "http://www.spindices.com/documents/additionalinfo/20140826-107542/107542_cshomeprice-history-0826.xls?force_download=true",
+          "title": "Home Price Index Levels"
+        }
+      ],
       "schema": {
         "fields": [
           {
             "name": "Date",
-            "type": "date"
+            "type": "date",
+            "format": "any"
           },
           {
             "name": "AZ-Phoenix",
@@ -126,12 +137,15 @@
   ],
   "views": [
     {
-      "id": "Graph",
-      "type": "Graph",
-      "state": {
-        "graphType": "lines-and-points",
+      "name": "graph",
+      "title": "US House Price Index (Case-Shiller)",
+      "specType": "simple",
+      "spec": {
+        "type": "lines-and-points",
         "group": "Date",
-        "series": [ "National-US" ]
+        "series": [
+          "National-US"
+        ]
       }
     }
   ]
