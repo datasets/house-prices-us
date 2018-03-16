@@ -3,14 +3,15 @@
   "title": "US House Price Index (Case-Shiller)",
   "licenses": [
     {
-      "url": "http://opendatacommons.org/licenses/pddl/1.0/",
-      "name": "public_domain_dedication_and_license"
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
   ],
   "sources": [
     {
       "name": "Standard and Poors Case-Shiller Indices",
-      "web": "http://www.spindices.com/indices/real-estate/sp-case-shiller-us-national-home-price-index",
+      "path": "http://www.spindices.com/indices/real-estate/sp-case-shiller-us-national-home-price-index",
       "title": "Standard and Poors Case-Shiller Indices"
     }
   ],
@@ -28,7 +29,7 @@
       "sources": [
         {
           "name": "Home Price Index Levels",
-          "web": "http://www.spindices.com/documents/additionalinfo/20140826-107542/107542_cshomeprice-history-0826.xls?force_download=true",
+          "path": "http://www.spindices.com/documents/additionalinfo/20140826-107542/107542_cshomeprice-history-0826.xls?force_download=true",
           "title": "Home Price Index Levels"
         }
       ],
