@@ -12,8 +12,7 @@ As per the [home page for Indices on S&P website][sp-home]:
 > Series which seeks to measure changes in the total value of all existing
 > single-family housing stock.
 
-Documentation of the methodology can be found at:
-<http://www.spindices.com/documents/methodologies/methodology-sp-cs-home-price-indices.pdf>
+[Documentation of the methodology can be found at](http://www.spindices.com/documents/methodologies/methodology-sp-cs-home-price-indices.pdf)
 
 Key points are (excerpted from methodology):
 
