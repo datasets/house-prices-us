@@ -139,6 +139,7 @@
   "views": [
     {
       "name": "graph",
+      "resources": ["cities"],
       "title": "US House Price Index (Case-Shiller)",
       "specType": "simple",
       "spec": {
