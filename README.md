@@ -49,6 +49,8 @@ but the HTML you see in your browser and the source HTML are different. In
 addition, the actual location of the XLS file continues to change on each
 release.
 
+This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.
+
 ## License
 
 Any rights of the maintainer are licensed under the PDDL. Exact legal status of
