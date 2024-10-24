@@ -1,3 +1,5 @@
+<a href="https://datahub.io/core/house-prices-us"><img src="https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25)" alt="badge" /></a>
+
 Case-Shiller Index of US residential house prices. Data comes from S&P
 Case-Shiller data and includes both the national index and the indices for 20
 metropolitan regions. The indices are created using a repeat-sales methodology.
