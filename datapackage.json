@@ -23,7 +23,7 @@
   ],
   "resources": [
     {
-      "name": "cities",
+      "name": "cities-sa",
       "path": "data/cities-month-SA.csv",
       "description": "Case-Shiller US home price index levels at national and city level. Monthly. Seasonally adjusted.",
       "periodicity": "month",
@@ -137,7 +137,7 @@
       }
     },
     {
-      "name": "cities",
+      "name": "cities-nsa",
       "path": "data/cities-month-NSA.csv",
       "description": "Case-Shiller US home price index levels at national and city level. Monthly. Not Seasonally adjusted.",
       "periodicity": "month",
@@ -249,21 +249,44 @@
           }
         ]
       }
+    },
+    {
+      "name": "national",
+      "path": "data/national-month.csv",
+      "description": "United States National Housing Price Indices.",
+      "periodicity": "month",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "format": "any"
+          },
+          {
+            "name": "National-US",
+            "type": "number"
+          },
+          {
+            "name": "National-US-SA",
+            "type": "number"
+          }
+        ]
+      }
     }
   ],
   "views": [
     {
       "name": "graph",
       "resources": [
-        "cities"
+        "national"
       ],
-      "title": "US House Price Index (Case-Shiller)",
+      "title": "United States National Housing Price Indices",
       "specType": "simple",
       "spec": {
         "type": "lines-and-points",
         "group": "Date",
         "series": [
-          "National-US"
+          "National-US-SA"
         ]
       }
     }
