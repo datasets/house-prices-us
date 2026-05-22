@@ -14,7 +14,7 @@ As per the [home page for Indices on S&P website][sp-home] (now hosted at spglob
 > Series which seeks to measure changes in the total value of all existing
 > single-family housing stock.
 
-[Documentation of the methodology can be found at](https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-cs-home-price-indices.pdf)
+Documentation of the methodology can be found on the [S&P DJI methodology page][sp-methodology].
 
 Key points are (excerpted from methodology):
 
@@ -32,6 +32,7 @@ Key points are (excerpted from methodology):
   Office of Federal Housing Enterprise Oversight (OFHEO)
 
 [sp-home]: https://www.spglobal.com/spdji/en/index-family/real-estate/sp-case-shiller
+[sp-methodology]: https://www.spglobal.com/spdji/en/index-family/real-estate/sp-case-shiller/#methodology
 
 ## Preparation
 
