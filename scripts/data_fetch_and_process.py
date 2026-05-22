@@ -9,11 +9,12 @@ import time
 import requests
 import pandas as pd
 
+from datetime import date
 from bs4 import BeautifulSoup
 
 data = 'archive/'
 realtime_start = '1987-01-01'
-realtime_end = '2024-10-08'
+realtime_end = date.today().isoformat()
 source = 'https://api.stlouisfed.org/fred/series/observations?series_id='
 
 api_key = os.environ['API_KEY'] ## YOUR API KEY

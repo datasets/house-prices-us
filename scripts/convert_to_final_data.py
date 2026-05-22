@@ -45,50 +45,34 @@ def get_key_from_filename(filename):
     return None
 
 def cities_month_csv(season):
-    """
-        Create a csv file with the data
-        :param data: dict
-        :return: None
-    """
     file_name = ''.join(['data/', 'cities-month', season, '.csv'])
-    dir_list = os.listdir(archive)
     start_time = datetime(1987, 1, 1)
-    sorted_files = sorted(dir_list, key=lambda x: header_order.index(get_key_from_filename(x)))
-    #print(sorted_files)
+
+    season_files = [f for f in os.listdir(archive) if season in f]
+    sorted_files = sorted(season_files, key=lambda x: header_order.index(get_key_from_filename(x)))
+
+    # Load every archive file into a {date_str: value} dict
+    series_data = {}
+    for file in sorted_files:
+        with open(archive + file, 'r') as f:
+            reader = csv.reader(f)
+            next(reader)
+            series_data[file] = {row[0]: row[1] for row in reader}
+
+    # Use the national archive file to define the authoritative date sequence
+    national_file = next(f for f in sorted_files if 'national' in f.lower())
+    date = sorted(
+        d for d in series_data[national_file]
+        if datetime.strptime(d, "%Y-%m-%d") >= start_time
+    )
+
+    # Align every series to the date sequence; blank-fill months before a series begins
+    final_list = [[series_data[f].get(d, '') for d in date] for f in sorted_files]
+
     with open(file_name, 'w', newline='') as output_file:
         writer = csv.writer(output_file)
-        final_list = []
-        date = []
-        # Iterate over each CSV file
-        for i, file in enumerate(dir_list):
-            if season in file:
-                temp = []
-                if 'national' in file.lower():
-                    with open(archive + file, 'r') as f:
-                        reader = csv.reader(f)
-                        next(reader)
-                        for row in reader:
-                            row_date = datetime.strptime(row[0], "%Y-%m-%d")
-                            if row_date >= start_time:
-                                date.append(row[0])
-                                temp.append(row[1])
-                            else:
-                                temp.append('')   
-                    final_list.append(temp)
-                else:  
-                    with open(archive + file, 'r') as f:
-                        reader = csv.reader(f)
-                        next(reader)
-                        for row in reader:
-                            row_date = datetime.strptime(row[0], "%Y-%m-%d")
-                            if row_date >= start_time:
-                                temp.append(row[1])
-                            else:
-                                temp.append('')   
-                    final_list.append(temp)
         writer.writerow(['Date'] + header_order)
         writer.writerows(zip(date, *final_list))
-    ## Add date to the csv file
     
                             
 def national_month_csv():
