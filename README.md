@@ -31,8 +31,8 @@ Key points are (excerpted from methodology):
   movements and is used by other home price ind ex publishers, including the
   Office of Federal Housing Enterprise Oversight (OFHEO)
 
-[sp-home]: https://www.spglobal.com/spdji/en/index-family/real-estate/sp-case-shiller
-[sp-methodology]: https://www.spglobal.com/spdji/en/index-family/real-estate/sp-case-shiller/#methodology
+[sp-home]: https://www.spglobal.com/spdji/en/index-family/indicators/sp-cotality-case-shiller/
+[sp-methodology]: https://www.spglobal.com/spdji/en/methodology/article/sp-cotality-case-shiller-home-price-indices-methodology/
 
 ## Preparation
 
