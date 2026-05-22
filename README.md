@@ -6,7 +6,7 @@ metropolitan regions. The indices are created using a repeat-sales methodology.
 
 ## Data
 
-As per the [home page for Indices on S&P website][sp-home]:
+As per the [home page for Indices on S&P website][sp-home] (now hosted at spglobal.com):
 
 > The S&P/Case-Shiller U.S. National Home Price Index is a composite of
 > single-family home price indices for the nine U.S. Census divisions and is
@@ -14,7 +14,7 @@ As per the [home page for Indices on S&P website][sp-home]:
 > Series which seeks to measure changes in the total value of all existing
 > single-family housing stock.
 
-[Documentation of the methodology can be found at](http://www.spindices.com/documents/methodologies/methodology-sp-cs-home-price-indices.pdf)
+Documentation of the methodology can be found on the [S&P DJI methodology page][sp-methodology].
 
 Key points are (excerpted from methodology):
 
@@ -31,25 +31,27 @@ Key points are (excerpted from methodology):
   movements and is used by other home price ind ex publishers, including the
   Office of Federal Housing Enterprise Oversight (OFHEO)
 
-[sp-home]: http://www.spindices.com/index-family/real-estate/sp-case-shiller
+[sp-home]: https://www.spglobal.com/spdji/en/index-family/indicators/sp-cotality-case-shiller/
+[sp-methodology]: https://www.spglobal.com/spdji/en/methodology/article/sp-cotality-case-shiller-home-price-indices-methodology/
 
 ## Preparation
 
-To download and process the data do:
+To download and process the data, set the `API_KEY` environment variable to a
+valid [FRED API key](https://fred.stlouisfed.org/docs/api/api_key.html) and run:
 
-    python scripts/process.py
+    make
 
-Updated data files will then be in `data` directory.
+This runs `scripts/data_fetch_and_process.py` (fetches per-series data from the
+FRED API into `archive/`) followed by `scripts/convert_to_final_data.py`
+(combines the archive files into the final CSVs in `data/`).
 
-Note: the URLs and structure of the source data have evolved over time with the
-source data URLs changing on *every release*.
+## Data quirks
 
-Originally (2013) the site provided a table of links but these are not direct
-file URLs and you have dig around in S&P's javascript to find the actual
-download locations. As of mid-2014 the data is consolidated in one primary XLS
-but the HTML you see in your browser and the source HTML are different. In
-addition, the actual location of the XLS file continues to change on each
-release.
+- **MA-Boston (NSA)**: values are `0` for months in the early part of the series
+  where FRED reports no observation rather than a null.
+- **CA-San Diego (SA)**: blank values appear in the earliest months before the
+  series begins.
+- All dates are set to the first day of the month (`YYYY-MM-01`).
 
 This product uses the FRED® API but is not endorsed or certified by the Federal Reserve Bank of St. Louis.
 
