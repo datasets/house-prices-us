@@ -1,10 +1,11 @@
 {
   "name": "house-prices-us",
   "title": "US House Price Index (Case-Shiller)",
+  "description": "S&P CoreLogic Case-Shiller home price index for the United States: national index and indices for 20 metropolitan areas, monthly, seasonally adjusted and not seasonally adjusted, from 1975 onwards.",
   "licenses": [
     {
       "name": "ODC-PDDL-1.0",
-      "path": "http://opendatacommons.org/licenses/pddl/",
+      "path": "https://opendatacommons.org/licenses/pddl/",
       "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
   ],
@@ -41,99 +42,123 @@
           {
             "name": "Date",
             "type": "date",
-            "format": "any"
+            "format": "default",
+            "description": "First day of the month for which the index value is reported (YYYY-MM-DD)."
           },
           {
             "name": "AZ-Phoenix",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Phoenix, Arizona (seasonally adjusted)."
           },
           {
             "name": "CA-Los Angeles",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Los Angeles, California (seasonally adjusted)."
           },
           {
             "name": "CA-San Diego",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for San Diego, California (seasonally adjusted). Blank for months before the series begins."
           },
           {
             "name": "CA-San Francisco",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for San Francisco, California (seasonally adjusted)."
           },
           {
             "name": "CO-Denver",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Denver, Colorado (seasonally adjusted)."
           },
           {
             "name": "DC-Washington",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Washington, DC (seasonally adjusted)."
           },
           {
             "name": "FL-Miami",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Miami, Florida (seasonally adjusted)."
           },
           {
             "name": "FL-Tampa",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Tampa, Florida (seasonally adjusted)."
           },
           {
             "name": "GA-Atlanta",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Atlanta, Georgia (seasonally adjusted)."
           },
           {
             "name": "IL-Chicago",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Chicago, Illinois (seasonally adjusted)."
           },
           {
             "name": "MA-Boston",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Boston, Massachusetts (seasonally adjusted)."
           },
           {
             "name": "MI-Detroit",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Detroit, Michigan (seasonally adjusted)."
           },
           {
             "name": "MN-Minneapolis",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Minneapolis, Minnesota (seasonally adjusted)."
           },
           {
             "name": "NC-Charlotte",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Charlotte, North Carolina (seasonally adjusted)."
           },
           {
             "name": "NV-Las Vegas",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Las Vegas, Nevada (seasonally adjusted)."
           },
           {
             "name": "NY-New York",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for New York, New York (seasonally adjusted)."
           },
           {
             "name": "OH-Cleveland",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Cleveland, Ohio (seasonally adjusted)."
           },
           {
             "name": "OR-Portland",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Portland, Oregon (seasonally adjusted)."
           },
           {
             "name": "TX-Dallas",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Dallas, Texas (seasonally adjusted)."
           },
           {
             "name": "WA-Seattle",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Seattle, Washington (seasonally adjusted)."
           },
           {
             "name": "Composite-10",
-            "type": "number"
+            "type": "number",
+            "description": "S&P/Case-Shiller 10-City Composite Home Price Index (seasonally adjusted)."
           },
           {
             "name": "Composite-20",
-            "type": "number"
+            "type": "number",
+            "description": "S&P/Case-Shiller 20-City Composite Home Price Index (seasonally adjusted)."
           },
           {
             "name": "National-US",
-            "type": "number"
+            "type": "number",
+            "description": "S&P/Case-Shiller U.S. National Home Price Index (seasonally adjusted)."
           }
         ]
       }
@@ -143,7 +168,7 @@
       "path": "data/cities-month-NSA.csv",
       "format": "csv",
       "mediatype": "text/csv",
-      "description": "Case-Shiller US home price index levels at national and city level. Monthly. Not Seasonally adjusted.",
+      "description": "Case-Shiller US home price index levels at national and city level. Monthly. Not seasonally adjusted. Note: MA-Boston values are 0 for months before the series began (early data gaps from FRED); CA-San Diego has blank values in early months.",
       "periodicity": "month",
       "sources": [
         {
@@ -157,99 +182,123 @@
           {
             "name": "Date",
             "type": "date",
-            "format": "any"
+            "format": "default",
+            "description": "First day of the month for which the index value is reported (YYYY-MM-DD)."
           },
           {
             "name": "AZ-Phoenix",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Phoenix, Arizona (not seasonally adjusted)."
           },
           {
             "name": "CA-Los Angeles",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Los Angeles, California (not seasonally adjusted)."
           },
           {
             "name": "CA-San Diego",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for San Diego, California (not seasonally adjusted). Blank for months before the series begins."
           },
           {
             "name": "CA-San Francisco",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for San Francisco, California (not seasonally adjusted)."
           },
           {
             "name": "CO-Denver",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Denver, Colorado (not seasonally adjusted)."
           },
           {
             "name": "DC-Washington",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Washington, DC (not seasonally adjusted)."
           },
           {
             "name": "FL-Miami",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Miami, Florida (not seasonally adjusted)."
           },
           {
             "name": "FL-Tampa",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Tampa, Florida (not seasonally adjusted)."
           },
           {
             "name": "GA-Atlanta",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Atlanta, Georgia (not seasonally adjusted)."
           },
           {
             "name": "IL-Chicago",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Chicago, Illinois (not seasonally adjusted)."
           },
           {
             "name": "MA-Boston",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Boston, Massachusetts (not seasonally adjusted). Values are 0 for early months where FRED reports no data."
           },
           {
             "name": "MI-Detroit",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Detroit, Michigan (not seasonally adjusted)."
           },
           {
             "name": "MN-Minneapolis",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Minneapolis, Minnesota (not seasonally adjusted)."
           },
           {
             "name": "NC-Charlotte",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Charlotte, North Carolina (not seasonally adjusted)."
           },
           {
             "name": "NV-Las Vegas",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Las Vegas, Nevada (not seasonally adjusted)."
           },
           {
             "name": "NY-New York",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for New York, New York (not seasonally adjusted)."
           },
           {
             "name": "OH-Cleveland",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Cleveland, Ohio (not seasonally adjusted)."
           },
           {
             "name": "OR-Portland",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Portland, Oregon (not seasonally adjusted)."
           },
           {
             "name": "TX-Dallas",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Dallas, Texas (not seasonally adjusted)."
           },
           {
             "name": "WA-Seattle",
-            "type": "number"
+            "type": "number",
+            "description": "Case-Shiller home price index for Seattle, Washington (not seasonally adjusted)."
           },
           {
             "name": "Composite-10",
-            "type": "number"
+            "type": "number",
+            "description": "S&P/Case-Shiller 10-City Composite Home Price Index (not seasonally adjusted)."
           },
           {
             "name": "Composite-20",
-            "type": "number"
+            "type": "number",
+            "description": "S&P/Case-Shiller 20-City Composite Home Price Index (not seasonally adjusted)."
           },
           {
             "name": "National-US",
-            "type": "number"
+            "type": "number",
+            "description": "S&P/Case-Shiller U.S. National Home Price Index (not seasonally adjusted)."
           }
         ]
       }
@@ -259,22 +308,32 @@
       "path": "data/national-month.csv",
       "format": "csv",
       "mediatype": "text/csv",
-      "description": "United States National Housing Price Indices.",
+      "description": "United States National Housing Price Indices. Monthly data from 1975 onwards, with both seasonally adjusted and not seasonally adjusted series.",
       "periodicity": "month",
+      "sources": [
+        {
+          "name": "Home Price Index Levels",
+          "path": "https://fred.stlouisfed.org/release/tables?rid=199&eid=243551",
+          "title": "Home Price Index Levels"
+        }
+      ],
       "schema": {
         "fields": [
           {
             "name": "Date",
             "type": "date",
-            "format": "any"
+            "format": "default",
+            "description": "First day of the month for which the index value is reported (YYYY-MM-DD)."
           },
           {
             "name": "National-US",
-            "type": "number"
+            "type": "number",
+            "description": "S&P/Case-Shiller U.S. National Home Price Index, not seasonally adjusted."
           },
           {
             "name": "National-US-SA",
-            "type": "number"
+            "type": "number",
+            "description": "S&P/Case-Shiller U.S. National Home Price Index, seasonally adjusted."
           }
         ]
       }
